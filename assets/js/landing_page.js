@@ -1,8 +1,9 @@
-(function () {
+
+(function() {
     "use strict";
 
     /**
-     * Select common function
+     * Easy selector helper function
      */
     const select = (el, all = false) => {
         el = el.trim()
@@ -14,7 +15,7 @@
     }
 
     /**
-     * Event listener function
+     * Easy event listener function
      */
     const on = (type, el, listener, all = false) => {
         let selectEl = select(el, all)
@@ -28,7 +29,7 @@
     }
 
     /**
-     * On scroll event listener
+     * Easy on scroll event listener
      */
     const onscroll = (el, listener) => {
         el.addEventListener('scroll', listener)
@@ -73,8 +74,7 @@
     }
 
     /**
-     * Toggle header .header-scrolled class to
-     * #header when page is scrolled
+     * Toggle .header-scrolled class to #header when page is scrolled
      */
     let selectHeader = select('#header')
     if (selectHeader) {
@@ -108,7 +108,7 @@
     /**
      * Mobile nav toggle
      */
-    on('click', '.mobile-nav-toggle', function (e) {
+    on('click', '.mobile-nav-toggle', function(e) {
         select('#navbar').classList.toggle('navbar-mobile')
         this.classList.toggle('bi-list')
         this.classList.toggle('bi-x')
@@ -117,7 +117,7 @@
     /**
      * Mobile nav dropdowns activate
      */
-    on('click', '.navbar .dropdown > a', function (e) {
+    on('click', '.navbar .dropdown > a', function(e) {
         if (select('#navbar').classList.contains('navbar-mobile')) {
             e.preventDefault()
             this.nextElementSibling.classList.toggle('dropdown-active')
@@ -127,7 +127,7 @@
     /**
      * Scrool with ofset on links with a class name .scrollto
      */
-    on('click', '.scrollto', function (e) {
+    on('click', '.scrollto', function(e) {
         if (select(this.hash)) {
             e.preventDefault()
 
@@ -151,6 +151,13 @@
                 scrollto(window.location.hash)
             }
         }
+    });
+
+    /**
+     * Initiate gallery lightbox
+     */
+    const galleryLightbox = GLightbox({
+        selector: '.gallery-lightbox'
     });
 
     /**
