@@ -19,6 +19,9 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -72,7 +75,22 @@
 
             </div>
         </div>
-        <img src="assets/images/Artboard 35_1.png" alt="Artboard 35" class="img-bar-home">
+
+        <div class="row counter-container">
+            <div class="col-sm-12 col-md-4 counter-item">
+                <div class="counter">167.000</div>
+                <div><span class="description">FIXED NFT SUPPLY</span></div>
+            </div>
+            <div class="col-sm-12 col-md-4 counter-item">
+                <div class="counter">55.000</div>
+                <div><span class="description">NFT FOR SALE</span></div>
+            </div>
+            <div class="col-sm-12 col-md-4 counter-item">
+                <div class="counter">45.000</div>
+                <div><span class="description">MAR LAND NFT</span></div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -107,8 +125,22 @@
         <div class="container">
             <h3 class="title-section"><span>HEROLAND BASE</span></h3>
             <div class="slider-container">
-                <img src="assets/images/Artboard 20.png" alt="Artboard 35" class="img-23">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="assets/images/Artboard 23.png" alt="Artboard 23" class="img-46">
+                    </div>
+                    <div class="item ">
+                        <img src="assets/images/Artboard 23.png" alt="Artboard 23" class="img-46">
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/Artboard 23.png" alt="Artboard 23" class="img-46">
+                    </div>
+                    <div class="item ">
+                        <img src="assets/images/Artboard 23.png" alt="Artboard 23" class="img-46">
+                    </div>
+                </div>
             </div>
+
             <div class="row">
                 <div class="col-sm-6">
                     <img src="assets/images/Artboard 23.png" alt="Artboard 35" class="img-23">
@@ -141,14 +173,15 @@
         <div class="container">
             <div class="col-md-9 offset-md-1">
                 <h3 class="title-section"><span>LANDOWNER BENEFITS</span></h3>
-
-                <div class="benefit-box">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <img src="assets/images/Artboard 27.png" alt="Artboard 27." class="img-27">
-                        </div>
-                        <div class="col-sm-6">
-                            <p>Sustainable and reputable ecosystem with Herobook and Herocard</p>
+                <div class="benefit-box slider-container">
+                    <div class="slider-container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="assets/images/Artboard 27.png" alt="Artboard 27." class="img-27">
+                            </div>
+                            <div class="col-sm-6">
+                                <p>Sustainable and reputable ecosystem with Herobook and Herocard</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -185,15 +218,15 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <p>3% on Airdrop campaig and marketing promotio - <strong>30,000,000</strong> Tokens</p>
-                    <p>15% Pre-Sale Release - <strong>150,000,000</strong> Tokens</p>
-                    <p>5% under the management of the Advisory Board - <strong>50,000,000</strong> Tokens</p>
-                    <p>15% listed on reserve fund and exchange - <strong>150,000,000</strong> Tokens</p>
-                    <p>25% for P2E - accompanying ecosystem - <strong>250,000,000</strong> Token</p>
-                    <p>15% under the management of the development team and ecosystem administrator
+                    <p><span class="counter">3</span> on Airdrop campaig and marketing promotio - <strong>30,000,000</strong> Tokens</p>
+                    <p><span class="counter">15</span> Pre-Sale Release - <strong>150,000,000</strong> Tokens</p>
+                    <p><span class="counter">5</span> under the management of the Advisory Board - <strong>50,000,000</strong> Tokens</p>
+                    <p><span class="counter">15</span> listed on reserve fund and exchange - <strong>150,000,000</strong> Tokens</p>
+                    <p><span class="counter">25</span> for P2E - accompanying ecosystem - <strong>250,000,000</strong> Token</p>
+                    <p><span class="counter">15</span> under the management of the development team and ecosystem administrator
                         <strong>150,000,000</strong></p>
-                    <p>12% for international marketing and expansion - <strong>120,000,000</strong> Token</p>
-                    <p>10% for project development fund - <strong>100,000,000</strong> Token</p>
+                    <p><span class="counter">12</span> for international marketing and expansion - <strong>120,000,000</strong> Token</p>
+                    <p><span class="counter">10</span> for project development fund - <strong>100,000,000</strong> Token</p>
                 </div>
                 <div class="col-sm-6">
                     <img src="assets/images/Artboard 39.png" alt="Artboard 39" class="img-39">
@@ -220,20 +253,61 @@
             <h3 class="title-section">
                 <span>OUR BACKER</span>
             </h3>
-            <div class="slider-container">
-                <img src="assets/images/Artboard 46.png" alt="Artboard 46" class="img-46">
-                <img src="assets/images/Artboard 46.png" alt="Artboard 47" class="img-46">
-                <img src="assets/images/Artboard 46.png" alt="Artboard 48" class="img-46">
+            <div id="carouselBacker" class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="assets/images/Artboard 46.png" alt="Artboard 46" class="img-46">
+                </div>
+                <div class="item ">
+                    <img src="assets/images/Artboard 47.png" alt="Artboard 47" class="img-46">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Artboard 48.png" alt="Artboard 48" class="img-46">
+                </div>
+                <div class="item ">
+                    <img src="assets/images/Artboard 49.png" alt="Artboard 49" class="img-46">
+                </div>
             </div>
-
             <h3 class="title-section">
                 <span>OUR PARNERS</span>
             </h3>
 
             <div class="slider-container">
-                <img src="assets/images/Artboard 46.png" alt="Artboard 46" class="img-46">
-                <img src="assets/images/Artboard 46.png" alt="Artboard 47" class="img-46">
-                <img src="assets/images/Artboard 46.png" alt="Artboard 48" class="img-46">
+                <div class="row">
+                    <div class="item">
+                        <img src="assets/images/Artboard 46.png" alt="Artboard 46" class="img-46">
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/Artboard 47.png" alt="Artboard 46" class="img-46">
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/Artboard 48.png" alt="Artboard 46" class="img-46">
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/Artboard 49.png" alt="Artboard 46" class="img-46">
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/Artboard 51.png" alt="Artboard 46" class="img-46">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="item">
+                        <img src="assets/images/Artboard 53.png" alt="Artboard 46" class="img-46">
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/Artboard 53_1.png" alt="Artboard 46" class="img-46">
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/Artboard 54.png" alt="Artboard 46" class="img-46">
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/Artboard 55.png" alt="Artboard 46" class="img-46">
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/Artboard 56.png" alt="Artboard 46" class="img-46">
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -337,7 +411,15 @@
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-chevron-up"></i></a>
 
+<!-- ✅ load jQuery ✅ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- ✅ load Bootstrap JS ✅ -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!--Todo remove waypoint and counterup-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- ✅ Load your JS file ✅ -->
 <script src="assets/js/landing_page.js"></script>
 
 </body>

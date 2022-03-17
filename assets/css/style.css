@@ -55,6 +55,10 @@ img {
     color: var(--main-color);
 }
 
+.counter {
+    font-size: 30px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -404,6 +408,25 @@ img {
     margin: 35px 0 15px 0;
 }
 
+#home .counter-container {
+    text-align: center;
+    margin: 10px 0;
+}
+#home .counter-item {
+    font-weight: 700;
+}
+
+#home .counter {
+    color: var(--main-color);
+    text-shadow: 1px 0px #8df3a4;
+}
+
+#home .counter-item .description {
+    color: #fff;
+    background-color: darkred;
+    padding: 0 5px 5px;
+    text-shadow: 1px 0px #8df3a4;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -428,7 +451,7 @@ img {
 }
 
 .slider-container img {
-    max-width: 300px;
+    max-width: 120px;
 }
 
 #base, #benefit, #tokenomic,
@@ -476,6 +499,9 @@ tokenomic
     color: var(--main-color);
 }
 
+#tokenomic .counter:after {
+    content: "%";
+}
 
 /*Roadmap*/
 #roadmap {
@@ -591,10 +617,6 @@ tokenomic
 
     #logo .img-logo {
         width: 56px;
-    }
-
-    #home {
-        min-height: auto;
     }
 
     #home .title-section span,

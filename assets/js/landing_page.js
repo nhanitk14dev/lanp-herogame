@@ -1,5 +1,4 @@
-
-(function() {
+(function ($) {
     "use strict";
 
     /**
@@ -108,7 +107,7 @@
     /**
      * Mobile nav toggle
      */
-    on('click', '.mobile-nav-toggle', function(e) {
+    on('click', '.mobile-nav-toggle', function (e) {
         select('#navbar').classList.toggle('navbar-mobile')
         this.classList.toggle('bi-list')
         this.classList.toggle('bi-x')
@@ -117,7 +116,7 @@
     /**
      * Mobile nav dropdowns activate
      */
-    on('click', '.navbar .dropdown > a', function(e) {
+    on('click', '.navbar .dropdown > a', function (e) {
         if (select('#navbar').classList.contains('navbar-mobile')) {
             e.preventDefault()
             this.nextElementSibling.classList.toggle('dropdown-active')
@@ -127,7 +126,7 @@
     /**
      * Scrool with ofset on links with a class name .scrollto
      */
-    on('click', '.scrollto', function(e) {
+    on('click', '.scrollto', function (e) {
         if (select(this.hash)) {
             e.preventDefault()
 
@@ -154,22 +153,71 @@
     });
 
     /**
-     * Initiate gallery lightbox
+     * Todo: use CountUp
      */
-    const galleryLightbox = GLightbox({
-        selector: '.gallery-lightbox'
-    });
 
-    /**
-     * Animation on scroll
-     */
-    window.addEventListener('load', () => {
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        })
-    });
+    // Home number counterup
+    if ($('.counter').length) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    }
 
-})()
+    /* let counter = select('.counter');
+     if (counter) {
+         const counterUp = () =>     {
+             $('.counter').each(function () {
+                 let $this = $(this),
+                     countTo = $this.attr('data-count'),
+                     unit = $this.attr('data-unit');
+
+                 $({countNum: $this.text()}).animate({
+                         countNum: countTo ? countTo : 0
+                     },
+                     {
+                         duration: 1000,
+                         easing: 'linear',
+                         step: function () {
+                             $this.text(Math.floor(this.countNum) + ' ' + unit);
+                         },
+                         complete: function () {
+                             if (unit) {
+                                 $this.text(this.countNum + ' ' + unit);
+                             } else {
+                                 $this.text(this.countNum);
+                             }
+                         }
+
+                     });
+             });
+         }
+         window.addEventListener('load', counterUp)
+         onscroll(document, counterUp)
+     }*/
+    // Home caroousel
+    if ($('.owl-carousel').length) {
+        $('.owl-carousel').owlCarousel({
+            lazyLoad: true,
+            autoplay: true,
+            navigation: true,
+            autoplayTimeout: 3000,
+            loop: true,
+            margin: 10,
+            items: 1,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        });
+    }
+
+})(window.jQuery);
