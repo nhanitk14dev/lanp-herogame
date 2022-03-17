@@ -5,6 +5,38 @@
     --color-red: red;
 }
 
+.color-limegreen {
+    color: limegreen;
+}
+
+.color-darkslateblue {
+    color: darkslateblue;
+}
+
+.color-palevioletred {
+    color: palevioletred;
+}
+
+.color-olive {
+    color: olive;
+}
+
+.color-lightskyblue {
+    color: lightskyblue;
+}
+
+.color-medium-darkred {
+    color: #c50f0f;
+}
+
+.color-yellowgreen {
+    color: yellowgreen;
+}
+
+.color-lightgray {
+    color: lightgray;
+}
+
 body {
     background: #fff;
     overflow-x: hidden;
@@ -57,6 +89,7 @@ img {
 
 .counter {
     font-size: 30px;
+    font-weight: 700;
 }
 
 /*--------------------------------------------------------------
@@ -133,6 +166,23 @@ img {
     font-weight: 500;
     font-size: 14px;
     min-width: 150px;
+}
+
+/*------------------
+  Custom carousel
+--------------------*/
+#landing-page-content .carousel-indicators {
+    bottom: 5px;
+}
+
+#landing-page-content .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-green-dark)
+}
+
+#landing-page-content .carousel-indicators li.active {
+    background-color: var(--main-color)
 }
 
 /*--------------------------------------------------------------
@@ -412,6 +462,7 @@ img {
     text-align: center;
     margin: 10px 0;
 }
+
 #home .counter-item {
     font-weight: 700;
 }
@@ -427,6 +478,7 @@ img {
     padding: 0 5px 5px;
     text-shadow: 1px 0px #8df3a4;
 }
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -450,10 +502,6 @@ img {
     margin: 15px 0;
 }
 
-.slider-container img {
-    max-width: 120px;
-}
-
 #base, #benefit, #tokenomic,
 #roadmap {
     position: relative;
@@ -470,10 +518,27 @@ img {
     /*url('../images/Artboard 36.png') center top no-repeat;*/
 }
 
-.benefit-box {
+#carouselBenefit {
     background-color: black;
-    padding: 20px;
-    margin: 40px 0;
+    padding: 30px;
+    margin: 30px 0;
+}
+
+#carouselBenefit .content {
+    display: flex;
+    text-align: left;
+}
+
+#carouselBenefit .item-img {
+    max-height: 300px;
+}
+
+#carouselBenefit .item-img img {
+    width: 200px;
+}
+
+#carouselBenefit .item-desc {
+    margin: 20px 5px 20px 30px;
 }
 
 /*---------
@@ -492,7 +557,6 @@ tokenomic
     text-align: left;
 }
 
-
 #tokenomic .title-section span {
     background-color: var(--bg-black);
     padding: 0 30px;
@@ -503,19 +567,71 @@ tokenomic
     content: "%";
 }
 
+#tokenomic .chart-label-desc {
+    display: flex;
+    margin: 15px 0;
+}
+
+#tokenomic .chart-label-desc .counter {
+    width: 20%;
+    margin: 0 5px 5px 0;
+}
+
+#tokenomic .chart-label-desc .desc {
+    width: 80%;
+}
+
+#tokenomic .img-chart {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
 /*Roadmap*/
 #roadmap {
     background: url('../images/Artboard 41.png') no-repeat center;
 }
 
-.bg-main {
+#landing-page-content {
     background: url('../images/Artboard 36.png') repeat-y center;
     background-size: contain;
 }
 
+/*#partner*/
+#carouselBacker {
+    margin: 50px 0 80px 0;
+}
+
+#partner {
+    padding: 30px 0;
+}
+
+#partner #partner-gallery {
+    margin-top: 40px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+#partner-gallery .vertical-item {
+    display: inline-block;
+    width: 19%;
+}
+
+#partner-gallery .item-media {
+    position: relative;
+    overflow: hidden;
+    margin: 7px;
+}
+
+
 /* build-create-earn */
 #build-create-earn {
-    min-height: 300px;
+    height: 310px;
+    text-align: center;
+    padding: 80px 0 20px 0;
+    background: linear-gradient(163deg, #0d0d0e, transparent);
 }
 
 /*community*/
@@ -605,7 +721,6 @@ tokenomic
     color: var(--main-color);
 }
 
-
 @media (max-width: 767px) {
     #base,
     #about,
@@ -638,4 +753,34 @@ tokenomic
     #home .btn-group-home {
         margin: 0;
     }
+
+    /*#benefit*/
+    #carouselBenefit .content {
+        display: block;
+        text-align: center;
+    }
+
+    #carouselBenefit {
+        padding: 8px 0;
+        margin: 0;
+    }
+
+    /*#partner*/
+    #carouselBacker {
+        margin: 15px 0;
+    }
+
+    #partner-gallery .vertical-item {
+        width: 30%;
+        margin: auto;
+    }
+
+    #partner-gallery .item-media {
+        margin: 10px 0px;
+    }
+
+    #tokenomic .img-chart {
+        position: relative;
+    }
+
 }

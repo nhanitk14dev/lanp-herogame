@@ -164,37 +164,6 @@
         });
     }
 
-    /* let counter = select('.counter');
-     if (counter) {
-         const counterUp = () =>     {
-             $('.counter').each(function () {
-                 let $this = $(this),
-                     countTo = $this.attr('data-count'),
-                     unit = $this.attr('data-unit');
-
-                 $({countNum: $this.text()}).animate({
-                         countNum: countTo ? countTo : 0
-                     },
-                     {
-                         duration: 1000,
-                         easing: 'linear',
-                         step: function () {
-                             $this.text(Math.floor(this.countNum) + ' ' + unit);
-                         },
-                         complete: function () {
-                             if (unit) {
-                                 $this.text(this.countNum + ' ' + unit);
-                             } else {
-                                 $this.text(this.countNum);
-                             }
-                         }
-
-                     });
-             });
-         }
-         window.addEventListener('load', counterUp)
-         onscroll(document, counterUp)
-     }*/
     // Home caroousel
     if ($('.owl-carousel').length) {
         $('.owl-carousel').owlCarousel({
@@ -204,7 +173,7 @@
             autoplayTimeout: 3000,
             loop: true,
             margin: 10,
-            items: 1,
+            items: 3,
             nav: true,
             responsive: {
                 0: {
@@ -219,5 +188,11 @@
             }
         });
     }
+
+
+
+    $('.carousel').carousel({
+        interval: 2000
+    })
 
 })(window.jQuery);
