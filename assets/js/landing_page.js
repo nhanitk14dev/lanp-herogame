@@ -169,7 +169,7 @@
         $('.owl-carousel').owlCarousel({
             lazyLoad: true,
             autoplay: true,
-            navigation: true,
+            navigation: false,
             autoplayTimeout: 3000,
             loop: true,
             margin: 10,
@@ -190,9 +190,8 @@
     }
 
 
-
     $('.carousel').carousel({
         interval: 2000
-    })
+    });
 
 })(window.jQuery);

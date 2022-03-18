@@ -50,7 +50,9 @@ a {
     transition: 0.5s;
 }
 
-a:hover, a:active, a:focus {
+a:hover,
+a:active,
+a:focus {
     color: var(--main-color);
     outline: none;
     text-decoration: none;
@@ -100,12 +102,11 @@ img {
     background: linear-gradient(45deg, #1de099, #1be02c);
     color: #fff;
     border-radius: 4px 4px 0 0;
-    right: 14px;
-    bottom: 0;
+    right: 0px;
+    bottom: 10px;
     transition: none;
-    visibility: hidden;
-    width: 60px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .back-to-top i {
@@ -128,7 +129,6 @@ img {
     padding: 5px;
     text-decoration: none;
     color: var(--main-color);
-    border-radius: 3px;
     transition: .4s;
     background: linear-gradient(18deg, #1e7e34, transparent);
     position: relative;
@@ -156,6 +156,7 @@ img {
     background-color: var(--color-green-dark);
     color: white;
     border: 2px solid white;
+    transition: 1s ease-in-out;
 }
 
 .btn-trailer {
@@ -226,12 +227,13 @@ img {
     position: relative;
 }
 
-.navbar > ul > li {
+.navbar>ul>li {
     white-space: nowrap;
     padding: 10px 0 10px 24px;
 }
 
-.navbar a, .navbar a:focus {
+.navbar a,
+.navbar a:focus {
     display: flex;
     color: var(--color-green-dark);
     font-size: 16px;
@@ -243,13 +245,17 @@ img {
     font-weight: 700;
 }
 
-.navbar a i, .navbar a:focus i {
+.navbar a i,
+.navbar a:focus i {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
 }
 
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
     color: var(--main-color);
 }
 
@@ -283,11 +289,13 @@ img {
     font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
     color: #1dc8cd;
 }
 
-.navbar .dropdown:hover > ul {
+.navbar .dropdown:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -299,7 +307,7 @@ img {
     visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .dropdown .dropdown:hover>ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -311,7 +319,7 @@ img {
         left: -90%;
     }
 
-    .navbar .dropdown .dropdown:hover > ul {
+    .navbar .dropdown .dropdown:hover>ul {
         left: -100%;
     }
 }
@@ -369,21 +377,25 @@ img {
     transition: 0.3s;
 }
 
-.navbar-mobile > ul > li {
+.navbar-mobile>ul>li {
     padding: 0;
 }
 
-.navbar-mobile a:hover:before, .navbar-mobile li:hover > a:before, .navbar-mobile .active:before {
+.navbar-mobile a:hover:before,
+.navbar-mobile li:hover>a:before,
+.navbar-mobile .active:before {
     visibility: hidden;
 }
 
-.navbar-mobile a, .navbar-mobile a:focus {
+.navbar-mobile a,
+.navbar-mobile a:focus {
     padding: 10px 20px;
     font-size: 15px;
     color: #333333;
 }
 
-.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
     margin: 15px;
 }
 
@@ -411,11 +423,13 @@ img {
     font-size: 12px;
 }
 
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
     color: #1dc8cd;
 }
 
-.navbar-mobile .dropdown > .dropdown-active {
+.navbar-mobile .dropdown>.dropdown-active {
     display: block;
 }
 
@@ -502,7 +516,9 @@ img {
     margin: 15px 0;
 }
 
-#base, #benefit, #tokenomic,
+#base,
+#benefit,
+#tokenomic,
 #roadmap {
     position: relative;
     display: block;
@@ -517,6 +533,41 @@ img {
     /*background: linear-gradient(45deg, rgb(185 206 198 / 80%), rgb(17 18 18 / 80%)),*/
     /*url('../images/Artboard 36.png') center top no-repeat;*/
 }
+
+
+#benefit .btn-group-help {
+    list-style-type: none;
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+    width: 100%;
+    margin-top: 40px;
+}
+
+
+#benefit .btn-group-help .square_btn {
+    transition: .4s;
+    background: linear-gradient(18deg, #1e7e34, #344237);
+    position: relative;
+    border: 3px solid var(--main-color);
+    width: 170px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 0px #8df3a4;
+}
+
+
+#benefit .btn-group-help .square_btn:hover {
+    background-color: linear-gradient(114deg, #1e7e34, transparent);
+    color: black;
+}
+
+
+#benefit .btn-group-help li {
+    margin: 5px;
+}
+
 
 #carouselBenefit {
     background-color: black;
@@ -541,9 +592,10 @@ img {
     margin: 20px 5px 20px 30px;
 }
 
-/*---------
-tokenomic
------*/
+
+/*------------------
+  Tokenomic
+--------------------*/
 
 #tokenomic {
     background: url('../images/Artboard 82.png') no-repeat center;
@@ -567,12 +619,13 @@ tokenomic
     content: "%";
 }
 
-#tokenomic .chart-label-desc {
-    display: flex;
+.chart-label-desc {
+    display: inline-flex;
     margin: 15px 0;
+    width: 100%;
 }
 
-#tokenomic .chart-label-desc .counter {
+.chart-label-desc .counter {
     width: 20%;
     margin: 0 5px 5px 0;
 }
@@ -588,7 +641,10 @@ tokenomic
     margin: auto;
 }
 
-/*Roadmap*/
+/*------------------
+  Roadmap
+--------------------*/
+
 #roadmap {
     background: url('../images/Artboard 41.png') no-repeat center;
 }
@@ -721,7 +777,31 @@ tokenomic
     color: var(--main-color);
 }
 
+
+
+
+@media screen and (min-width: 1024px) {
+    #benefit .btn-group-help {
+        display: inline-flex;
+    }
+
+    #benefit .btn-group-help li:first-child {
+        margin-left: -80px;
+    }
+
+    #benefit .btn-group-help .square_btn {
+        width: 180px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #benefit .btn-group-help li:first-child {
+        margin-left: 30px;
+    }
+}
+
 @media (max-width: 767px) {
+
     #base,
     #about,
     #benefit,
