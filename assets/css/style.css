@@ -91,7 +91,7 @@ img {
 }
 
 .counter {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -125,49 +125,42 @@ img {
     opacity: 1;
 }
 
-.square_btn {
-    display: inline-block;
-    padding: 5px;
-    text-decoration: none;
+.hero_button {
+    padding: 0 5px;
     color: var(--main-color);
-    transition: .4s;
-    background: linear-gradient(18deg, #1e7e34, transparent);
-    position: relative;
-    border: 3px solid #fff;
-    border-radius: 8px;
-    width: 186px;
+    background: url(../images/button-hero-1.png);
+    height: 70px;
+    width: 210px;
     font-size: 16px;
-    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     text-transform: uppercase;
+    text-decoration: none !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    margin: 5px;
 }
 
-.square_btn:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    right: 1px;
-    bottom: 1px;
-    border: 2px solid #1e7e34;
-    border-radius: 8px;
-}
 
-.square_btn:hover,
+.hero_button:hover,
 .btn-trailer:hover {
-    background-color: var(--color-green-dark);
-    color: white;
-    border: 2px solid white;
+    color: #fff;
 }
+
 
 .btn-trailer {
     background: linear-gradient(167deg, #be4a4a, transparent);
     position: relative;
     border: 2px solid var(--main-color);
     color: #3df4a8;
-    font-weight: 500;
+    text-shadow: 1px 0px #568761;
     font-size: 14px;
+    font-weight: 400;
     min-width: 150px;
+    text-transform: uppercase;
 }
 
 /*------------------
@@ -477,9 +470,9 @@ img {
 #home .counter-container {
     text-align: center;
     margin: 10px 0;
-    background: url('../images/Artboard 82.png') repeat-x;
+    background: url('../images/bg_counter.png') no-repeat center;
     width: 100%;
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 #home .counter-item {
@@ -522,9 +515,10 @@ img {
 --------------------*/
 
 #base .base-bg-slider {
-    background: url('../images/Artboard 82.png') repeat center;
+    background: url(../images/artboard_82.png) no-repeat center;
     padding: 6px 0;
     margin: 100px 0 40px 0;
+    background-size: cover;
 }
 
 #base .base-bg-slider .title-section span {
@@ -606,7 +600,7 @@ img {
 
 
 #benefit {
-    background: linear-gradient(to bottom, #101011, transparent);
+    background: url(../images/artboard_83.png) no-repeat center;
     margin-top: 100px;
     padding: 20px 0;
 }
@@ -619,32 +613,25 @@ img {
     margin: auto;
     width: 100%;
     margin-top: 40px;
-}
-
-
-#benefit .btn-group-help .square_btn {
-    transition: .4s;
-    background: linear-gradient(18deg, #1e7e34, #344237);
-    position: relative;
-    border: 3px solid var(--main-color);
-    width: 170px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 1px 0px #8df3a4;
-}
-
-
-#benefit .btn-group-help .square_btn:hover {
-    background: linear-gradient(18deg, #1e7e34, transparent);
-    color: var(--main-color);
-    border: 1px solid #fff;
-    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 
 #benefit .btn-group-help li {
-    margin: 5px;
+    display: contents;
+}
+
+.btn-group-help .hero_button {
+    background: url(../images/button-hero-2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-weight: 700;
+    height: 50px;
+    width: 140px;
+    margin: 10px;
 }
 
 #benefit .title-section {
@@ -692,8 +679,15 @@ img {
 --------------------*/
 
 #tokenomic {
-    background: url('../images/Artboard 82.png') no-repeat center;
+    background: url(../images/artboard_82.png) repeat center;
+    background-size: contain;
     margin: 100px 0;
+}
+
+#tokenomic .group-title {
+    position: relative;
+    top: -100px;
+    margin-top: 200px;
 }
 
 #tokenomic .img-39 {
@@ -716,17 +710,17 @@ img {
 
 .chart-label-desc {
     display: inline-flex;
-    margin: 15px 0;
     width: 100%;
+    margin-bottom: 5px;
 }
 
 .chart-label-desc .counter {
-    width: 20%;
-    margin: 0 5px 5px 0;
+    width: 15%;
+    margin: 0 10px 5px 0;
 }
 
 #tokenomic .chart-label-desc .desc {
-    width: 80%;
+    width: 85%;
 }
 
 #tokenomic .img-chart {
@@ -885,14 +879,6 @@ img {
         display: inline-flex;
     }
 
-    #benefit .btn-group-help li:first-child {
-        margin-left: -80px;
-    }
-
-    #benefit .btn-group-help .square_btn {
-        width: 180px;
-    }
-
     .single-img {
         width: 90%;
     }
@@ -900,9 +886,6 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-    #benefit .btn-group-help li:first-child {
-        margin-left: 30px;
-    }
 
     .single-img {
         width: 65%;
@@ -916,7 +899,7 @@ img {
     #benefit,
     #tokenomic,
     #roadmap {
-        padding: 0;
+        padding: 20px 0;
     }
 
     #logo .img-logo {
@@ -950,10 +933,6 @@ img {
         margin-top: 100px;
     }
 
-    #home .square_btn {
-        margin-bottom: 15px;
-    }
-
     #home .btn-group-home {
         margin: 0;
     }
@@ -985,6 +964,15 @@ img {
 
     #tokenomic .img-chart {
         position: relative;
+    }
+
+    #tokenomic .group-title {
+        top: -60px;
+        margin-top: 100px;
+    }
+
+    #tokenomic .group-title .title-section {
+        margin: auto;
     }
 
     /*#base*/
