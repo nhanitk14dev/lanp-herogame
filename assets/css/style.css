@@ -1,6 +1,6 @@
 :root {
     --bg-black: black;
-    --main-color: #0fe841;
+    --main-color: #26f456;
     --color-green-dark: #4f8b6f;
     --color-red: red;
 }
@@ -72,6 +72,7 @@ img {
 .sub-title-section {
     text-align: center;
     margin: 25px 0 15px 0;
+    text-transform: uppercase;
 }
 
 .title-section span,
@@ -137,6 +138,7 @@ img {
     width: 186px;
     font-size: 16px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .square_btn:before {
@@ -156,7 +158,6 @@ img {
     background-color: var(--color-green-dark);
     color: white;
     border: 2px solid white;
-    transition: 1s ease-in-out;
 }
 
 .btn-trailer {
@@ -177,8 +178,8 @@ img {
 }
 
 #landing-page-content .carousel-indicators li {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background-color: var(--color-green-dark)
 }
 
@@ -441,7 +442,8 @@ img {
     position: relative;
     background: url('../images/Artboard 2.png') no-repeat center;
     background-size: cover;
-    min-height: 1110px;
+    background-color: black;
+    padding-bottom: 20px;
 }
 
 #home .home-container {
@@ -460,11 +462,11 @@ img {
 
 #home .title-section span {
     background: linear-gradient(195deg, black, transparent);
-    font-size: 32px;
+    font-size: 34px;
     padding: 0 30px;
     color: var(--main-color);
     border: 1px solid var(--color-red);
-    text-shadow: 1px 0px #8df3a4;
+    text-shadow: 2px 0px #74a77f;
     word-spacing: 5px;
 }
 
@@ -475,6 +477,9 @@ img {
 #home .counter-container {
     text-align: center;
     margin: 10px 0;
+    background: url('../images/Artboard 82.png') repeat-x;
+    width: 100%;
+    padding: 50px 0;
 }
 
 #home .counter-item {
@@ -491,6 +496,7 @@ img {
     background-color: darkred;
     padding: 0 5px 5px;
     text-shadow: 1px 0px #8df3a4;
+    font-weight: 500;
 }
 
 /*--------------------------------------------------------------
@@ -507,13 +513,86 @@ img {
     padding: 60px 100px;
 }
 
+.single-img {
+    width: 100%;
+}
+
 /*------------------
   Base
 --------------------*/
 
+#base .base-bg-slider {
+    background: url('../images/Artboard 82.png') repeat center;
+    padding: 6px 0;
+    margin: 100px 0 40px 0;
+}
 
-.slider-container {
-    margin: 15px 0;
+#base .base-bg-slider .title-section span {
+    position: absolute;
+    top: -26px;
+    left: 40%;
+}
+
+#base .electric {
+    text-align: left;
+}
+
+#base .owl-controls {
+    width: 104%;
+    position: relative;
+}
+
+#base .owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+#base .custom-nav {
+    position: absolute;
+    top: -150px;
+    left: 5px;
+    right: 0;
+    height: 100px;
+    width: 100%;
+}
+
+#base .owl-prev {
+    left: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+#base .owl-next {
+    right: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.owl-nav {
+    display: block !important;
+}
+
+#base .owl-prev,
+.owl-next {
+    position: absolute;
+    height: 100px;
+    color: inherit;
+    background: none;
+    border: none;
+    z-index: 100;
+}
+
+/*font bootstrap*/
+#base .bi {
+    color: var(--main-color);
+    font-size: 35px;
+    text-shadow: 0 0 3px white;
+}
+
+#base .single-img-inner {
+    text-align: right;
+    margin-top: 20px;
 }
 
 #base,
@@ -523,15 +602,13 @@ img {
     position: relative;
     display: block;
     color: #fff;
-    height: auto;
-    padding: 60px 100px;
 }
 
-/*Benefit*/
+
 #benefit {
-    text-align: center;
-    /*background: linear-gradient(45deg, rgb(185 206 198 / 80%), rgb(17 18 18 / 80%)),*/
-    /*url('../images/Artboard 36.png') center top no-repeat;*/
+    background: linear-gradient(to bottom, #101011, transparent);
+    margin-top: 100px;
+    padding: 20px 0;
 }
 
 
@@ -559,8 +636,10 @@ img {
 
 
 #benefit .btn-group-help .square_btn:hover {
-    background-color: linear-gradient(114deg, #1e7e34, transparent);
-    color: black;
+    background: linear-gradient(18deg, #1e7e34, transparent);
+    color: var(--main-color);
+    border: 1px solid #fff;
+    font-weight: 500;
 }
 
 
@@ -568,11 +647,28 @@ img {
     margin: 5px;
 }
 
+#benefit .title-section {
+    margin: 50px 0;
+}
+
+.benefit-slider-inner {
+    background-color: black;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    top: -50px;
+}
 
 #carouselBenefit {
-    background-color: black;
-    padding: 30px;
-    margin: 30px 0;
+    border: 3px solid var(--main-color);
+    margin-top: 50px;
+    border-top: unset;
+    height: 100%;
+    padding: 15px 30px;
+}
+
+#carouselBenefit .carousel-inner {
+    margin-bottom: 30px;
 }
 
 #carouselBenefit .content {
@@ -580,12 +676,10 @@ img {
     text-align: left;
 }
 
-#carouselBenefit .item-img {
-    max-height: 300px;
-}
 
 #carouselBenefit .item-img img {
-    width: 200px;
+    width: auto;
+    height: 180px;
 }
 
 #carouselBenefit .item-desc {
@@ -599,6 +693,7 @@ img {
 
 #tokenomic {
     background: url('../images/Artboard 82.png') no-repeat center;
+    margin: 100px 0;
 }
 
 #tokenomic .img-39 {
@@ -649,9 +744,16 @@ img {
     background: url('../images/Artboard 41.png') no-repeat center;
 }
 
+.bg-roadmap {
+    background: linear-gradient(to bottom, #101011, transparent);
+    padding: 50px 0;
+}
+
 #landing-page-content {
     background: url('../images/Artboard 36.png') repeat-y center;
-    background-size: contain;
+    background-size: 130% 40%;
+    background-color: #212529;
+    overflow: hidden;
 }
 
 /*#partner*/
@@ -687,7 +789,7 @@ img {
     height: 310px;
     text-align: center;
     padding: 80px 0 20px 0;
-    background: linear-gradient(163deg, #0d0d0e, transparent);
+    background: linear-gradient(162deg, black, transparent);
 }
 
 /*community*/
@@ -778,8 +880,6 @@ img {
 }
 
 
-
-
 @media screen and (min-width: 1024px) {
     #benefit .btn-group-help {
         display: inline-flex;
@@ -792,11 +892,20 @@ img {
     #benefit .btn-group-help .square_btn {
         width: 180px;
     }
+
+    .single-img {
+        width: 90%;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
     #benefit .btn-group-help li:first-child {
         margin-left: 30px;
+    }
+
+    .single-img {
+        width: 65%;
     }
 }
 
@@ -807,18 +916,33 @@ img {
     #benefit,
     #tokenomic,
     #roadmap {
-        padding: 20px;
+        padding: 0;
     }
 
     #logo .img-logo {
         width: 56px;
     }
 
+    #base .base-bg-slider .title-section span {
+        position: relative;
+        top: -60px;
+        left: 0;
+    }
+
     #home .title-section span,
-    .title-section span {
+    .title-section span,
+    #tokenomic .title-section span {
         font-size: 20px;
         word-spacing: unset;
         padding: 0 2px;
+    }
+
+    #home .counter-item {
+        margin-bottom: 20px;
+    }
+
+    #home .counter {
+        font-size: 20px;
     }
 
     #home .home-img {
@@ -861,6 +985,15 @@ img {
 
     #tokenomic .img-chart {
         position: relative;
+    }
+
+    /*#base*/
+    #base .owl-carousel .owl-stage-outer {
+        margin: auto;
+    }
+
+    #base .owl-controls {
+        width: 100%;
     }
 
 }
