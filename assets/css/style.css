@@ -680,13 +680,14 @@ img {
 
 #tokenomic {
     background: url(../images/artboard_82.png) repeat center;
-    background-size: contain;
+    background-size: cover;
     margin: 100px 0;
 }
 
 #tokenomic .group-title {
     position: relative;
     top: -100px;
+    margin-bottom: -100px;
     margin-top: 200px;
 }
 
@@ -723,11 +724,12 @@ img {
     width: 85%;
 }
 
-#tokenomic .img-chart {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+#tokenomic #chart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+    min-height: 250px;
 }
 
 /*------------------
@@ -962,13 +964,10 @@ img {
         margin: 10px 0px;
     }
 
-    #tokenomic .img-chart {
-        position: relative;
-    }
-
     #tokenomic .group-title {
         top: -60px;
-        margin-top: 100px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     #tokenomic .group-title .title-section {

@@ -157,7 +157,7 @@
      */
 
     // Home number counterup
-    if ($('.counter').length) {
+    if ($('.counter').length && parseInt($('.counter').text()) > 0) {
         $('.counter').counterUp({
             delay: 10,
             time: 1000
@@ -184,7 +184,6 @@
         })
     }
  
-    
 
     // Base caroousel
     var owl = $('.custom-owl-container .owl-carousel');
@@ -219,6 +218,53 @@
             owl.trigger('next.owl.carousel');
         });
     }
+
+// Apexcharts
+var options = {
+    series: [30000000, 150000000, 50000000, 150000000, 250000000, 150000000, 120000000, 100000000],
+    labels: [
+        "Airdrop campaign and marketing promotion",
+        "Pre-Sale Release",
+        "under the management of the Advisory Board",
+        "listed on reserve fund and exchange",
+        "for P2E - accompanying ecosystem",
+        "under the management of the development team and ecosystem administrator",
+        "for international marketing and expansion",
+        "for project development fund"
+    ],
+    colors: ['#d3d3d3', '#32cd32', '#87cefa', '#c50f0f', '#db7093', '#9acd32', '#808000', '#483d8b'],
+    chart: {
+        width: 380,
+        type: 'pie',
+    },
+    legend: {
+        show: false,
+    },
+    responsive: [{
+        breakpoint: 480,
+        options: {
+            chart: {
+                width: 300
+            }
+        }
+    }]
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+
+/**
+ * Animation on scroll
+ */
+window.addEventListener('load', () => {
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    })
+});
     
 
 })(window.jQuery);
