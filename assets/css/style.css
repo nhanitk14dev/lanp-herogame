@@ -44,39 +44,34 @@ body {
     font-size: 14px;
 }
 
-a {
-    color: #1dc8cd;
-    text-decoration: none;
-    transition: 0.5s;
-}
 
-a:hover,
-a:active,
-a:focus {
+#landing-page a:hover,
+#landing-page a:active,
+#landing-page a:focus {
     color: var(--main-color);
     outline: none;
     text-decoration: none;
 }
 
-p {
+#landing-page p {
     padding: 0;
     margin: 0 0 30px 0;
 }
 
-img {
+#landing-page img {
     width: 100%;
     height: auto;
 }
 
-.title-section,
-.sub-title-section {
+#landing-page .title-section,
+#landing-page .sub-title-section {
     text-align: center;
     margin: 25px 0 15px 0;
     text-transform: uppercase;
 }
 
-.title-section span,
-.sub-title-section span {
+#landing-page .title-section span,
+#landing-page .sub-title-section span {
     font-weight: 700;
     background-color: var(--main-color);
     font-size: 32px;
@@ -84,13 +79,13 @@ img {
     color: var(--bg-black)
 }
 
-.sub-title-section span {
+#landing-page .sub-title-section span {
     font-size: 22px;
     background-color: unset;
     color: var(--main-color);
 }
 
-.counter {
+#landing-page .counter {
     font-size: 24px;
     font-weight: 700;
 }
@@ -98,7 +93,7 @@ img {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+.lanp-back-to-top {
     position: fixed;
     background: linear-gradient(45deg, #1de099, #1be02c);
     color: #fff;
@@ -110,22 +105,22 @@ img {
     height: 50px;
 }
 
-.back-to-top i {
+.lanp-back-to-top i {
     line-height: 0;
     font-size: 18px;
 }
 
-.back-to-top:hover {
+.lanp-back-to-top:hover {
     background: #1de099;
     color: #fff;
 }
 
-.back-to-top.active {
+.lanp-back-to-top.active {
     visibility: visible;
     opacity: 1;
 }
 
-.hero_button {
+#landing-page .hero_button {
     padding: 0 5px;
     color: var(--main-color);
     background: url(../images/button-hero-1.png);
@@ -148,6 +143,9 @@ img {
 .hero_button:hover,
 .btn-trailer:hover {
     color: #fff;
+    filter:drop-shadow(5px 5px 5px rgba(0,0,0,.24));
+    transition:all .1s ease-in;
+    transform:scale(1.03);
 }
 
 
@@ -166,17 +164,17 @@ img {
 /*------------------
   Custom carousel
 --------------------*/
-#landing-page-content .carousel-indicators {
+#landing-content .carousel-indicators {
     bottom: 5px;
 }
 
-#landing-page-content .carousel-indicators li {
+#landing-content .carousel-indicators li {
     width: 10px;
     height: 10px;
     background-color: var(--color-green-dark)
 }
 
-#landing-page-content .carousel-indicators li.active {
+#landing-content .carousel-indicators li.active {
     background-color: var(--main-color)
 }
 
@@ -661,12 +659,13 @@ img {
 #carouselBenefit .content {
     display: flex;
     text-align: left;
+    height: 210px;
 }
 
 
 #carouselBenefit .item-img img {
     width: auto;
-    height: 180px;
+    height: 160px;
 }
 
 #carouselBenefit .item-desc {
@@ -745,7 +744,7 @@ img {
     padding: 50px 0;
 }
 
-#landing-page-content {
+#landing-content {
     background: url('../images/Artboard 36.png') repeat-y center;
     background-size: 130% 40%;
     background-color: #212529;
@@ -943,6 +942,7 @@ img {
     #carouselBenefit .content {
         display: block;
         text-align: center;
+        height: 280px;
     }
 
     #carouselBenefit {
