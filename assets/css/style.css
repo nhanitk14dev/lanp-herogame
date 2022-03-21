@@ -53,12 +53,12 @@ body {
     text-decoration: none;
 }
 
-#landing-page p {
+p {
     padding: 0;
     margin: 0 0 30px 0;
 }
 
-#landing-page img {
+img {
     width: 100%;
     height: auto;
 }
@@ -76,7 +76,8 @@ body {
     background-color: var(--main-color);
     font-size: 32px;
     padding: 0 30px;
-    color: var(--bg-black)
+    color: var(--bg-black);
+    text-shadow: 0 0 black;
 }
 
 #landing-page .sub-title-section span {
@@ -90,9 +91,6 @@ body {
     font-weight: 700;
 }
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
 .lanp-back-to-top {
     position: fixed;
     background: linear-gradient(45deg, #1de099, #1be02c);
@@ -103,6 +101,7 @@ body {
     transition: none;
     width: 50px;
     height: 50px;
+    visibility: hidden;
 }
 
 .lanp-back-to-top i {
@@ -120,7 +119,7 @@ body {
     opacity: 1;
 }
 
-#landing-page .hero_button {
+.hero_button {
     padding: 0 5px;
     color: var(--main-color);
     background: url(../images/button-hero-1.png);
@@ -139,15 +138,18 @@ body {
     margin: 5px;
 }
 
-
 .hero_button:hover,
 .btn-trailer:hover {
     color: #fff;
-    filter:drop-shadow(5px 5px 5px rgba(0,0,0,.24));
-    transition:all .1s ease-in;
-    transform:scale(1.03);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .24));
+    transition: all .1s ease-in;
+    transform: scale(1.03);
 }
 
+.hero_button.contract {
+    color: white;
+    text-shadow: 2px 0 #28a745;
+}
 
 .btn-trailer {
     background: linear-gradient(167deg, #be4a4a, transparent);
@@ -431,7 +433,7 @@ body {
 
 #home {
     position: relative;
-    background: url('../images/Artboard 2.png') no-repeat center;
+    background: url('../images/earth_medium.png') no-repeat center;
     background-size: cover;
     background-color: black;
     padding-bottom: 20px;
@@ -499,7 +501,7 @@ body {
     display: block;
     color: #fff;
     height: auto;
-    background: url('../images/Artboard 32.png') no-repeat center;
+    background: url('../images/bg_about_medium.png') no-repeat center;
     background-size: cover;
     padding: 60px 100px;
 }
@@ -527,6 +529,12 @@ body {
 
 #base .electric {
     text-align: left;
+}
+
+#base .electric span {
+    background-color: black;
+    color: #d8f5da;
+    text-shadow: 3px 0 #06fb21;
 }
 
 #base .owl-controls {
@@ -575,6 +583,15 @@ body {
     z-index: 100;
 }
 
+#base,
+#benefit,
+#tokenomic,
+#roadmap-section {
+    position: relative;
+    display: block;
+    color: #fff;
+}
+
 /*font bootstrap*/
 #base .bi {
     color: var(--main-color);
@@ -587,20 +604,11 @@ body {
     margin-top: 20px;
 }
 
-#base,
-#benefit,
-#tokenomic,
-#roadmap {
-    position: relative;
-    display: block;
-    color: #fff;
-}
-
-
 #benefit {
     background: url(../images/artboard_83.png) no-repeat center;
     margin-top: 100px;
     padding: 20px 0;
+    text-align: center;
 }
 
 
@@ -735,9 +743,192 @@ body {
   Roadmap
 --------------------*/
 
-#roadmap {
+#roadmap-section {
     background: url('../images/Artboard 41.png') no-repeat center;
 }
+
+.road-map {
+    display: flex;
+}
+
+.road-map:after {
+    background: url(../images/bg_line_curve.png) no-repeat center;
+    content: " ";
+    position: absolute;
+    top: 40%;
+    left: 1px;
+    height: 100px;
+    width: 100%;
+    background-size: cover;
+    display: block;
+    z-index: -999999;
+}
+
+
+@media (min-width: 1200px) {
+    .road-map:after {
+        height: 110px;
+        width: 96%;
+    }
+
+}
+
+.road-item {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    height: 580px;
+}
+
+.box-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    left: 10px;
+    padding: 0 2px;
+}
+
+.road-item .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+}
+
+.box-container .bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.road-item.third .box-container {
+    left: -14px;
+}
+
+.box-container.fourth {
+    left: -22px;
+}
+
+.box-container.fifth {
+    left: -36px;
+}
+
+.box-container .card {
+    height: 100%;
+}
+
+.card-bg-darkgreen {
+    background-color: green;
+}
+
+/*------------------
+  Arrow
+--------------------*/
+.arrow-top,
+.arrow-bottom {
+    border-radius: 20px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.arrow-top:after {
+    content: " ";
+    position: absolute;
+    left: 40%;
+    bottom: -28px;
+    border-right: 18px solid transparent;
+    border-left: 18px solid transparent;
+    border-top: 30px solid green;
+}
+
+.arrow-bottom:after {
+    content: " ";
+    position: absolute;
+    right: 43%;
+    top: -30px;
+    border-top: none;
+    border-right: 18px solid transparent;
+    border-left: 18px solid transparent;
+    border-bottom: 30px solid green;
+}
+
+/*------------------
+  Card
+--------------------*/
+.card-bg-darkred {
+    background-color: #7c0011;
+}
+
+.third .arrow-top:after {
+    border-top: 30px solid #8f1122;
+    z-index: -9999;
+}
+
+.fourth .arrow-bottom:after {
+    border-bottom: 30px solid #8f1122;
+    z-index: -9999;
+}
+
+.box-container .card-header {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 black;
+}
+
+.box-container .card-body {
+    padding: 1rem 1rem;
+    list-style-type: square;
+    margin-left: 8px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    height: 130px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .box-container {
+        height: 38%;
+    }
+
+    .road-item.fourth .box-container {
+        left: -20px;
+    }
+
+
+    .road-item.fifth .box-container {
+        left: -36px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .box-container {
+        left: 25px;
+    }
+
+    .road-item.second .box-container {
+        left: -4px;
+    }
+
+    .road-item.third .box-container {
+        left: -35px;
+    }
+
+    .road-item.fourth .box-container {
+        left: -65px;
+    }
+
+
+    .road-item.fifth .box-container {
+        left: -92px;
+    }
+
+}
+
 
 .bg-roadmap {
     background: linear-gradient(to bottom, #101011, transparent);
@@ -745,13 +936,16 @@ body {
 }
 
 #landing-content {
-    background: url('../images/Artboard 36.png') repeat-y center;
+    background: url('../images/bg_landing_medium.png') repeat-y center;
     background-size: 130% 40%;
     background-color: #212529;
     overflow: hidden;
 }
 
-/*#partner*/
+/*------------------
+  Partner
+--------------------*/
+
 #carouselBacker {
     margin: 50px 0 80px 0;
 }
@@ -778,8 +972,6 @@ body {
     margin: 7px;
 }
 
-
-/* build-create-earn */
 #build-create-earn {
     height: 310px;
     text-align: center;
@@ -787,7 +979,9 @@ body {
     background: linear-gradient(162deg, black, transparent);
 }
 
-/*community*/
+/*------------------
+  Community
+--------------------*/
 
 #community {
     background: linear-gradient(158deg, #f8f9fa, transparent);
@@ -807,13 +1001,16 @@ body {
     padding: 0 30px;
     color: white;
     text-align: left;
+    font-weight: normal;
 }
 
 #community .title-section span {
     font-size: 26px;
 }
 
-/*Social*/
+/*------------------
+  Social
+--------------------*/
 .social-footer {
     display: inline-flex;
 }
@@ -857,8 +1054,9 @@ body {
     height: 50px;
 }
 
-/*Footer*/
-
+/*------------------
+  Footer
+--------------------*/
 #footer {
     background: linear-gradient(162deg, black, transparent);
     margin-top: 10px;
@@ -874,8 +1072,18 @@ body {
     color: var(--main-color);
 }
 
-
 @media screen and (min-width: 1024px) {
+
+    #tokenomic .title-section,
+    #landing-page .sub-title-section {
+        margin: 5px 0 10px 0;
+    }
+
+    #roadmap-section .title-section span {
+        padding: 0 18px;
+        margin-right: 50px;
+    }
+
     #benefit .btn-group-help {
         display: inline-flex;
     }
@@ -888,6 +1096,25 @@ body {
 
 @media screen and (min-width: 1200px) {
 
+    #landing-content {
+        background: url('../images/bg_landing.png') repeat-y center;
+        background-size: 130% 40%;
+        background-color: #212529;
+    }
+
+    #home {
+        position: relative;
+        background: url('../images/earth.png') no-repeat center;
+        background-size: cover;
+        background-color: black;
+        padding-bottom: 20px;
+    }
+
+    #about {
+        background: url('../images/bg_about.png') no-repeat center;
+        background-size: cover;
+    }
+
     .single-img {
         width: 65%;
     }
@@ -899,7 +1126,7 @@ body {
     #about,
     #benefit,
     #tokenomic,
-    #roadmap {
+    #roadmap-section {
         padding: 20px 0;
     }
 
@@ -982,5 +1209,61 @@ body {
     #base .owl-controls {
         width: 100%;
     }
+}
+
+
+@media screen and (max-width: 1023px) {
+    /* Handle card roadmap remove style */
+
+    .road-item.third .box-container {
+        left: 0;
+    }
+
+
+    .box-container,
+    .road-item .bottom {
+        left: 0;
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    .road-map {
+        display: block;
+    }
+
+    .box-container .arrow-top:after,
+    .box-container .arrow-bottom:after {
+        display: none;
+    }
+
+    .road-item {
+        margin: 20px 0;
+        height: 130px;
+    }
+
+    .box-container .card-body {
+        height: auto;
+    }
+
+    .road-item.second .card-body,
+    .road-item.fourth .card-body {
+        margin-top: 40px;
+    }
+
+    .road-item.second .card-header,
+    .road-item.fourth .card-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .road-map:after {
+        display: none;
+    }
+
+    /* End card roadmap remove style */
 
 }

@@ -152,11 +152,7 @@
         }
     });
 
-    /**
-     * Todo: use CountUp
-     */
-
-    // Home number counterup
+    // Counterup
     if ($('.counter').length && parseInt($('.counter').text()) > 0) {
         $('.counter').counterUp({
             delay: 10,
@@ -167,6 +163,7 @@
     // Basic carousel
     if ($('.basic-carousel .owl-carousel').length) {
         $('.basic-carousel .owl-carousel').owlCarousel({
+            lazyLoad: true,
             loop: true,
             margin: 10,
             nav: true,
@@ -212,7 +209,7 @@
         }
     });
 
-    // Go to the next item for Custom nav
+    // Trigger click button next item for Custom nav
     if ($('.custom-nav .owl-next').length) {
         $('.custom-nav .owl-next').click(function() {
             owl.trigger('next.owl.carousel');
