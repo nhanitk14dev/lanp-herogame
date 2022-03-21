@@ -64,7 +64,7 @@ a:hover,
 a:focus {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .24));
     transition: all .1s ease-in;
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -75,7 +75,7 @@ img {
 
 a:hover img {
     opacity: 0.4;
-    animation: zoom-in-zoom-out 2s ease-out 
+    animation: zoom-in-zoom-out 2s ease-out
 }
 
 @keyframes zoom-in-zoom-out {
@@ -462,10 +462,11 @@ a:hover img {
 
 #home {
     position: relative;
-    background: url('../images/earth_medium.png') no-repeat center;
+    background: url('../images/earth_medium.png') no-repeat;
     background-size: cover;
     background-color: black;
     padding-bottom: 20px;
+    background-position: center;
 }
 
 #home .home-container {
@@ -473,7 +474,6 @@ a:hover img {
     display: block;
     text-align: center;
     width: 100%;
-    min-height: 450px;
     padding-bottom: 30px;
 }
 
@@ -532,12 +532,9 @@ a:hover img {
     height: auto;
     background: url('../images/bg_about_medium.png') no-repeat center;
     background-size: cover;
-    padding: 60px 100px;
+    padding: 10px 2px;
 }
 
-.single-img {
-    width: 100%;
-}
 
 /*------------------
   Base
@@ -566,18 +563,18 @@ a:hover img {
     text-shadow: 3px 0 #06fb21;
 }
 
-#base .owl-controls {
+.custom-owl-container .owl-controls {
     width: 104%;
     position: relative;
 }
 
-#base .owl-carousel .owl-stage-outer {
+.custom-owl-container .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
     margin: 10px;
 }
 
-#base .custom-nav {
+.custom-nav {
     position: absolute;
     top: -150px;
     left: 5px;
@@ -586,24 +583,12 @@ a:hover img {
     width: 100%;
 }
 
-#base .owl-prev {
-    left: 0;
-    outline: none;
-    cursor: pointer;
+#partner .custom-nav {
+    display: none;
 }
 
-#base .owl-next {
-    right: 0;
-    outline: none;
-    cursor: pointer;
-}
-
-.owl-nav {
-    display: block !important;
-}
-
-#base .owl-prev,
-.owl-next {
+.custom-nav .owl-prev,
+.custom-nav .owl-next {
     position: absolute;
     height: 100px;
     color: inherit;
@@ -611,6 +596,26 @@ a:hover img {
     border: none;
     z-index: 100;
 }
+
+.custom-nav .owl-prev {
+    left: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.custom-nav .owl-next {
+    right: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+/*font bootstrap*/
+.custom-nav .bi {
+    color: var(--main-color);
+    font-size: 35px;
+    text-shadow: 0 0 3px white;
+}
+
 
 #base,
 #benefit,
@@ -621,16 +626,15 @@ a:hover img {
     color: #fff;
 }
 
-/*font bootstrap*/
-#base .bi {
-    color: var(--main-color);
-    font-size: 35px;
-    text-shadow: 0 0 3px white;
+.single-img-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#base .single-img-inner {
-    text-align: right;
-    margin-top: 20px;
+.single-img-inner .single-img {
+    width: 300px;
 }
 
 #benefit {
@@ -774,6 +778,11 @@ a:hover img {
 
 #roadmap {
     background: url('../images/Artboard 41.png') no-repeat center;
+}
+
+/*Roadmap*/
+#roadmap .title-section {
+    margin: -15px 0 40px 0;
 }
 
 .road-map {
@@ -1003,7 +1012,7 @@ a:hover img {
 #build-create-earn {
     height: 310px;
     text-align: center;
-    padding: 80px 0 20px 0;
+    padding: 50px 0 20px 0;
     background: linear-gradient(162deg, black, transparent);
 }
 
@@ -1116,10 +1125,6 @@ a:hover img {
         display: inline-flex;
     }
 
-    .single-img {
-        width: 90%;
-    }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -1142,38 +1147,34 @@ a:hover img {
         background: url('../images/bg_about.png') no-repeat center;
         background-size: cover;
     }
-
-    .single-img {
-        width: 65%;
-    }
 }
 
 @media (max-width: 767px) {
 
-    #base,
-    #about,
-    #benefit,
-    #tokenomic,
-    #roadmap {
-        padding: 20px 0;
+    #landing-content {
+        background-size: auto;
+        background-position: center;
+    }
+
+    #landing-page .title-section span {
+        font-size: 24px;
     }
 
     #logo .img-logo {
         width: 56px;
     }
 
-    #base .base-bg-slider .title-section span {
-        position: relative;
-        top: -60px;
-        left: 0;
+    #home {
+        background-size: auto;
+        background-position: top;
     }
 
     #home .title-section span,
     .title-section span,
     #tokenomic .title-section span {
-        font-size: 20px;
-        word-spacing: unset;
+        font-size: 24px;
         padding: 0 2px;
+        word-spacing: 2px;
     }
 
     #home .counter-item {
@@ -1185,13 +1186,17 @@ a:hover img {
     }
 
     #home .home-img {
-        width: 100%;
-        margin-top: 100px;
+        width: 90%;
     }
 
     #home .btn-group-home {
-        margin: 0;
+        margin: 0 0 15px 0;
     }
+
+    #home .home-container {
+        padding-bottom: 5px;
+    }
+
 
     /*#benefit*/
     #carouselBenefit .content {
@@ -1205,14 +1210,26 @@ a:hover img {
         margin: 0;
     }
 
+    #partner .custom-nav {
+        display: block;
+    }
+
+    #partner .owl-carousel .owl-item img {
+        display: block;
+        width: 80%;
+        margin-left: 34px;
+    }
+
     /*#partner*/
     #carouselBacker {
         margin: 15px 0;
     }
 
     #partner-gallery .vertical-item {
-        width: 30%;
+        width: 48%;
         margin: auto;
+        min-width: 140px;
+        max-width: 330px;
     }
 
     #partner-gallery .item-media {
@@ -1229,16 +1246,35 @@ a:hover img {
         margin: auto;
     }
 
+    #base .base-bg-slider .title-section span {
+        position: relative;
+        top: -60px;
+        left: 0;
+    }
+
     /*#base*/
-    #base .owl-carousel .owl-stage-outer {
+    .custom-owl-container .owl-carousel .owl-stage-outer {
         margin: auto;
     }
 
-    #base .owl-controls {
+    .custom-owl-container .owl-controls {
         width: 100%;
     }
-}
 
+
+    /*Roadmap*/
+    #roadmap .title-section {
+        margin: 0 0 10px 0;
+    }
+
+    #roadmap .bg-roadmap {
+        padding: 20px 0;
+    }
+
+    #footer {
+        text-align: center;
+    }
+}
 
 @media screen and (max-width: 1023px) {
     /* Handle card roadmap remove style */
@@ -1293,5 +1329,4 @@ a:hover img {
     }
 
     /* End card roadmap remove style */
-
 }

@@ -160,31 +160,9 @@
             time: 3000
         });
     }
-
-    // Basic carousel
-    let $basicCarousel = $('.basic-carousel .owl-carousel');
-    if ($basicCarousel.length) {
-        $basicCarousel.owlCarousel({
-            lazyLoad: true,
-            loop: true,
-            margin: 10,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
-                }
-            }
-        })
-    }
  
 
-    // Base caroousel
+    // Custom caroousel
     var $owl = $('.custom-owl-container .owl-carousel');
     if ($owl.length) {
         $owl.owlCarousel({
