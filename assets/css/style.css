@@ -58,9 +58,38 @@ p {
     margin: 0 0 30px 0;
 }
 
+.road-item:hover,
+.road-item:focus,
+a:hover,
+a:focus {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .24));
+    transition: all .1s ease-in;
+    transform:scale(1.1);
+}
+
+
 img {
     width: 100%;
     height: auto;
+}
+
+a:hover img {
+    opacity: 0.4;
+    animation: zoom-in-zoom-out 2s ease-out 
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 #landing-page .title-section,
@@ -586,7 +615,7 @@ img {
 #base,
 #benefit,
 #tokenomic,
-#roadmap-section {
+#roadmap {
     position: relative;
     display: block;
     color: #fff;
@@ -743,7 +772,7 @@ img {
   Roadmap
 --------------------*/
 
-#roadmap-section {
+#roadmap {
     background: url('../images/Artboard 41.png') no-repeat center;
 }
 
@@ -968,7 +997,6 @@ img {
 
 #partner-gallery .item-media {
     position: relative;
-    overflow: hidden;
     margin: 7px;
 }
 
@@ -1079,7 +1107,7 @@ img {
         margin: 5px 0 10px 0;
     }
 
-    #roadmap-section .title-section span {
+    #roadmap .title-section span {
         padding: 0 18px;
         margin-right: 50px;
     }
@@ -1126,7 +1154,7 @@ img {
     #about,
     #benefit,
     #tokenomic,
-    #roadmap-section {
+    #roadmap {
         padding: 20px 0;
     }
 

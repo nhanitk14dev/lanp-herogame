@@ -153,16 +153,18 @@
     });
 
     // Counterup
-    if ($('.counter').length && parseInt($('.counter').text()) > 0) {
-        $('.counter').counterUp({
+    let $counterUp = $('.counter');
+    if ($counterUp.length && parseInt($counterUp.text()) > 0) {
+        $counterUp.counterUp({
             delay: 10,
-            time: 1000
+            time: 3000
         });
     }
 
     // Basic carousel
-    if ($('.basic-carousel .owl-carousel').length) {
-        $('.basic-carousel .owl-carousel').owlCarousel({
+    let $basicCarousel = $('.basic-carousel .owl-carousel');
+    if ($basicCarousel.length) {
+        $basicCarousel.owlCarousel({
             lazyLoad: true,
             loop: true,
             margin: 10,
@@ -183,85 +185,103 @@
  
 
     // Base caroousel
-    var owl = $('.custom-owl-container .owl-carousel');
-    owl.owlCarousel({
-        lazyLoad: true,
-        autoplay: true,
-        stagePadding: 10,
-        loop: true,
-        margin: 10,
-        nav: true,
-        navText: [
-            '<i class="bi bi-caret-left-fill" aria-hidden="true"></i>',
-            '<i class="bi bi-caret-right-fill" aria-hidden="true"></i>'
-        ],
-        navContainer: '.custom-owl-container .custom-nav',
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 5
+    var $owl = $('.custom-owl-container .owl-carousel');
+    if ($owl.length) {
+        $owl.owlCarousel({
+            lazyLoad: true,
+            autoplay: true,
+            stagePadding: 10,
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: [
+                '<i class="bi bi-caret-left-fill" aria-hidden="true"></i>',
+                '<i class="bi bi-caret-right-fill" aria-hidden="true"></i>'
+            ],
+            navContainer: '.custom-owl-container .custom-nav',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
             }
-        }
-    });
-
-    // Trigger click button next item for Custom nav
-    if ($('.custom-nav .owl-next').length) {
-        $('.custom-nav .owl-next').click(function() {
-            owl.trigger('next.owl.carousel');
         });
     }
 
-// Apexcharts
-var options = {
-    series: [30000000, 150000000, 50000000, 150000000, 250000000, 150000000, 120000000, 100000000],
-    labels: [
-        "Airdrop campaign and marketing promotion",
-        "Pre-Sale Release",
-        "under the management of the Advisory Board",
-        "listed on reserve fund and exchange",
-        "for P2E - accompanying ecosystem",
-        "under the management of the development team and ecosystem administrator",
-        "for international marketing and expansion",
-        "for project development fund"
-    ],
-    colors: ['#d3d3d3', '#32cd32', '#87cefa', '#c50f0f', '#db7093', '#9acd32', '#808000', '#483d8b'],
-    chart: {
-        width: 380,
-        type: 'pie',
-    },
-    legend: {
-        show: false,
-    },
-    responsive: [{
-        breakpoint: 480,
-        options: {
-            chart: {
-                width: 300
+    // Trigger click button next item for Custom nav
+    let $customNavOwlNext = $('.custom-nav .owl-next');
+    if ($customNavOwlNext.length) {
+        $customNavOwlNext.click(function() {
+            $owl.trigger('next.owl.carousel');
+        });
+    }
+
+    // Apexcharts
+    var options = {
+        series: [30000000, 150000000, 50000000, 150000000, 250000000, 150000000, 120000000, 100000000],
+        labels: [
+            "Airdrop campaign and marketing promotion",
+            "Pre-Sale Release",
+            "under the management of the Advisory Board",
+            "listed on reserve fund and exchange",
+            "for P2E - accompanying ecosystem",
+            "under the management of the development team and ecosystem administrator",
+            "for international marketing and expansion",
+            "for project development fund"
+        ],
+        colors: ['#d3d3d3', '#32cd32', '#87cefa', '#c50f0f', '#db7093', '#9acd32', '#808000', '#483d8b'],
+        chart: {
+            width: 380,
+            type: 'pie',
+        },
+        legend: {
+            show: false,
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 300
+                }
             }
-        }
-    }]
-};
+        }]
+    };
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
 
 
-/**
- * Animation on scroll
- */
-window.addEventListener('load', () => {
-    AOS.init({
-        duration: 1200,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
-    })
-});
+    /**
+     * Animation on scroll
+     */
+    window.addEventListener('load', () => {
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        })
+    });
+
+    let $baseSliderItems = $('.base-bg-slider .item');
+    if ($baseSliderItems.length) {
+        $baseSliderItems.click(function(e) {
+            let dataId = $(this).data('id');
+            let $item = $(".base-item-" + dataId);
+            let $baseContentItems = $('#base .base-content-item');
+
+            if ($item.hasClass('d-none')) {
+                $baseContentItems.addClass('d-none');
+                $item.removeClass('d-none');
+            };
+        })
+    }
+    
     
 
 })(window.jQuery);
