@@ -154,7 +154,7 @@
 
     // Counterup
     let $counterUp = $('.counter');
-    if ($counterUp.length && parseInt($counterUp.text()) > 0) {
+    if ($counterUp.length) {
         $counterUp.counterUp({
             delay: 10,
             time: 3000
