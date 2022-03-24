@@ -41,7 +41,7 @@ body {
     background: #fff;
     overflow-x: hidden;
     font-family: 'Space Mono', monospace;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -66,7 +66,6 @@ a:focus {
     transition: all .1s ease-in;
     transform: scale(1.1);
 }
-
 
 img {
     width: 100%;
@@ -99,8 +98,8 @@ a:hover img {
     text-transform: uppercase;
 }
 
-#landing-page .title-section span,
-#landing-page .sub-title-section span {
+.title-section span,
+.sub-title-section span {
     font-weight: 700;
     background-color: var(--main-color);
     font-size: 32px;
@@ -109,7 +108,7 @@ a:hover img {
     text-shadow: 0 0 black;
 }
 
-#landing-page .sub-title-section span {
+.sub-title-section span {
     font-size: 22px;
     background-color: unset;
     color: var(--main-color);
@@ -190,6 +189,7 @@ a:hover img {
     font-weight: 400;
     min-width: 150px;
     text-transform: uppercase;
+    display: none;
 }
 
 /*------------------
@@ -456,6 +456,52 @@ a:hover img {
     display: block;
 }
 
+
+/*--------------------------------------------------------------
+# Typewriter Animation
+--------------------------------------------------------------*/
+.typewriter {
+    border-right: solid 3px rgba(0, 255, 0, .75);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 32px;
+    color: var(--main-color);
+    text-shadow: 2px 0px #74a77f;
+    word-spacing: 2px;
+}
+
+/* Animation */
+.typewriter {
+    animation: animated-text 4s steps(18, end) 1s 1 normal both,
+        animated-cursor 600ms steps(18, end) infinite;
+    animation-iteration-count: infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 400px;
+    }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+    from {
+        border-right-color: rgba(0, 255, 0, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
@@ -475,6 +521,7 @@ a:hover img {
     text-align: center;
     width: 100%;
     padding-bottom: 30px;
+    overflow: hidden;
 }
 
 #home .home-img {
@@ -482,14 +529,17 @@ a:hover img {
     margin-top: 100px;
 }
 
-#home .title-section span {
+
+#home .home-title-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.bg-home-title {
+    width: 480px;
     background: linear-gradient(195deg, black, transparent);
-    font-size: 34px;
-    padding: 0 30px;
-    color: var(--main-color);
     border: 1px solid var(--color-red);
-    text-shadow: 2px 0px #74a77f;
-    word-spacing: 5px;
+    padding: 5px 5px 5px 20px;
 }
 
 #home .btn-group-home {
@@ -1156,8 +1206,8 @@ a:hover img {
         background-position: center;
     }
 
-    #landing-page .title-section span {
-        font-size: 24px;
+    #landing-page .title-section {
+        font-size: 22px;
     }
 
     #logo .img-logo {
@@ -1169,12 +1219,20 @@ a:hover img {
         background-position: top;
     }
 
-    #home .title-section span,
+
+    #home .container {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .bg-home-title {
+        padding: 5px 0;
+    }
+
     .title-section span,
     #tokenomic .title-section span {
         font-size: 24px;
         padding: 0 2px;
-        word-spacing: 2px;
     }
 
     #home .counter-item {
@@ -1212,11 +1270,12 @@ a:hover img {
 
     #partner .custom-nav {
         display: block;
+        left: -3px;
     }
 
     #partner .owl-carousel .owl-item img {
         display: block;
-        width: 80%;
+        width: 75%;
         margin-left: 34px;
     }
 
